@@ -49,4 +49,4 @@ step 6: When all the txt file has been generated,
 Whola! We are done!
 
 # Reusability
-You can find it inside the readme of fio_test folder. 
+You can find it in the readme inside the stat_generator folder. 
