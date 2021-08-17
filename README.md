@@ -1,6 +1,6 @@
 # fio_test_kioxia
 
-The main goal of this code is to use fio scripts against different type of drives and get the performance (IOPS, BW) and cpu (utilization) based metrices. Now if you want to test against a bare SSD drive, just start from **Run and generate the Test Result** section. Make sure your drive is preconditioned properly. But if you want to generate results for RAID array, you need to create the array first and run the experiements. We used **mdadm** utility to create the md array. There are tons of resources in internet regarding how to create RAID array using **mdadm**, but still I am putting those in the next section for the convenience.
+The main goal of this code is to use fio scripts against different type of drives and get the performance (IOPS, BW) and cpu (utilization) based metrices. Now if you want to test against a bare SSD drive, just start from **Run and generate the Test Result** section. Make sure your drive is preconditioned properly. But if you want to generate results for RAID array, you need to create the array first and run the experiements. We used **mdadm** utility to create the md array. There are tons of resources in internet regarding how to create RAID array using **mdadm**, but still I am putting those in the next section for convenience.
 
 # Create RAID Array
 
