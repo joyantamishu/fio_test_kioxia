@@ -1,0 +1,38 @@
+Python Scipts to generate csv file containing all the required stats
+
+Okay lets talk about the naming convmetion and the structure of a single fio file, located inside fio_tests.zip file
+
+# Naming Convention
+
+Each file name starts with the operation name, follwed by queue depth and the number of parallel job. For example if the file name is: randomwriteq32t16.fio, that means its for random write operation and it has total of 16 jobs, each try to maintain queue depth 32 in the device layer. So it total the device queue depth is 16*32=512.
+
+# Parameters
+structure of a single fio file.(randomwriteq32t16.fio)
+
+[global]
+bs=4K
+iodepth=32
+direct=1
+ioengine=libaio
+group_reporting
+time_based
+runtime=120
+numjobs=16
+name=raw-randwrite
+rw=randwrite
+cpus_allowed=0,1
+cpus_allowed_policy=split
+							
+[job1]
+filename=/dev/md5
+
+all the names are self explanatory. bs stands for block size, iodepth stands for queudepth per job will maintain, ioengine stands for type of operation, runtime stands for experimental run time in seconds, filename stands for the drive name.
+
+Now if you want to run the same experiement for different drive, then use the following command to replace the drive name in each of the test files.
+
+sed -i 's/md5/md6/g' *.
+
+What the above command does, replacing the md5 with md6 in each of the files in the current directory. That's all you need to do when you try to run the experiement for different drives. 
+
+cpus_allowed and cpus_allowed_policy are two parameters we used to understand the cpu behavior for different RAID array parameters. You can remove these two lines from each of the file, if you don't want to pin the cpu to run a job. 
+
