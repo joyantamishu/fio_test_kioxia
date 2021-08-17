@@ -24,7 +24,7 @@ def dump_result(performance_dict, cpu_dict):
     workload_string = ['seqwriteq{}t{}', 'seqreadq{}t{}', 'randomreadq{}t{}', 'randomwriteq{}t{}']
     workload_string_identifier = ['Sequential 128 KB Write', 'Sequential 128KB Read', 'Random 4KB Read', 'Random 4KB Write']
 
-    f = open("data.csv", "w")
+    f = open("main_performance_file.csv", "w")
     f.write('Operation, Opt_ID, Threads, Queue Depth, Device Queue Depth, KIOPS , Bandwidth(MiBs), cpu_usages_mean, cpu_usages_variance\n')
 
     queue_depth_array = ['1', '2', '4', '8', '16', '32', '64', '128']
