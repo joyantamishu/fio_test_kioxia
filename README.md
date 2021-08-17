@@ -39,7 +39,7 @@ step 4: ***cd stat_generator***
 
 inside the **stat_generator** folder you have two files, named **main_performance.py** and **main_performance_and_cpu_core_all_info.py** which are used to generate the results. Lets generate the input data (run fio scripts) to generate the final result. Please note that these two python file is written in python3.
 
-step 5: run ***sudo ./run_test.sh***, to gnerate the input data. This might take approximately 1.30 hours to generate all the inputs. Each of the .fio file has a corresponding .txt file in the current directory and in the **cpu/** directory
+step 5: run ***sudo ./run_test.sh***, to generate the input data. You might need to run **chmod 755 run_test.sh** for the appropriate permission of the .sh file. This might take approximately 1.30 hours to generate all the inputs. Each of the .fio file has a corresponding .txt file in the current directory and in the **cpu/** directory
 
 step 6: When all the txt file has been generated, 
 
