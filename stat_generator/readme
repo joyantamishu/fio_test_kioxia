@@ -1,7 +1,0 @@
-Python Scipts to generate csv file containing all the required stats
-
-Okay lets talk about the naming convmetion and the structure of a single fio file, located inside fio_tests.zip file
-
-# Naming Convention
-
-Each file name starts with the operation name, follwed by queue depth and the number of parallel job. 
