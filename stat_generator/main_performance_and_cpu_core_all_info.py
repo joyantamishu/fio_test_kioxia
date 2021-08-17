@@ -29,7 +29,7 @@ def return_cpu_list(cpu_usage_list):
 def dump_result(performance_dict, cpu_dict):
     workload_string = ['seqwriteq{}t{}', 'seqreadq{}t{}', 'randomreadq{}t{}', 'randomwriteq{}t{}']
     workload_string_identifier = ['Sequential 128 KB Write', 'Sequential 128KB Read', 'Random 4KB Read', 'Random 4KB Write']
-    f = open("data.csv", "w")
+    f = open("main_performance_and_cpu_core_all_info_file.csv", "w")
     f.write('Operation, Opt_ID, Threads, Queue Depth, Device Queue Depth, KIOPS , Bandwidth(MiBs), '
             'cpu_core_index, usr, nice, sys, iowait, irq, soft, steal, guest, gnice, cpu_usages\n')
 
